@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "工作应该返璞归真"
-date:   2015-03-17 18:00:00
+date:   2015-03-17 18:00:00+0800
 categories: 心态
 author: xavier
 ---

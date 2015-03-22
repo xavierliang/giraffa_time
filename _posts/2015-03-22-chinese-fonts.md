@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "网页上的中文字体"
-date: 2015-03-22 18:00:00
+date: 2015-03-22 18:00:00+0800
 categories: 前端
 author: xavier
 ---
