@@ -6,11 +6,11 @@ author: xavier
 categories: 前端
 ---
 
-[源码](https://github.com/xavierliang/sectionSlide)
-
 随着智能手机的使用越来越普及，针对手机端的业务介绍、邀请函越来越多。
 
 不过使用第三方提供的编辑器却存在各种问题，比如过于花哨、动画效果不满意、有广告。于是闲暇时间做了一个简单的库，提供js与css的支持，用户只需要简单写点html就可以满足上面的需求。
+
+[源码](https://github.com/xavierliang/sectionSlide)
 
 #### 手机上的PPT
 
