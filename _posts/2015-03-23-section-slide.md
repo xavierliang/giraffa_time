@@ -16,11 +16,15 @@ categories: 前端
 
 设计思路源于PPT，有层次、有结构地展现要表达的内容即可。
 
-考虑到手机上的交互应该简单明了，所以只需要涉及上下滑动两个动作。而滑动过程中可选择不同的动画或者切换效果。
+考虑到手机上的交互应该简单明了，所以只需要涉及上下或者左右滑动两个动作。而滑动过程中可选择不同的动画或者切换效果。
 
 #### 如何使用
 
-%section.scene 表示一个页面，而 %section.slide 表示页面内的一个slide，一个页面中可以有多个slide，slide在滑动过程中在该页面内变动。
+%section.scene 表示一个页面。
+
+%section.slide 表示页面内的一个slide，一个页面中可以有多个slide，slide在滑动过程中在该页面内变动。
+
+.fragment 为 %section.slide 内的元素，如果设定参数 data-auto 不为零，则自动播放，单位为毫秒。
 
 css模板中默认提供的动画效果如下：
 
@@ -32,11 +36,14 @@ css模板中默认提供的动画效果如下：
     .shrink //缩放
     .roll   //滚动
 
-haml使用方式如下：
+使用方式如下(haml)：
 
     %section.scene
         %section.slide
         %section.slide
+            .fragment(data-auto=500 data-exempt=5)
+            .fragment(data-auto=500)
+            .fragment(data-clear=3)
     %section.scene
         %section.slide
 
@@ -62,5 +69,10 @@ haml使用方式如下：
     %section.scene.left.left_after
         %h1
         ...
+
+#### fragment data 参数
+
+    data-auto 自动播放的时间，单位为毫秒。若该参数为零或者不填，则手动播放
+    data-clear 表示清楚之前出现的 data-exempt 小于data-clear 的 fragment，若之前的某个 fragment 的 data-exempt 大于或等于 data-clear，则不被清楚。
 
 [源码](https://github.com/xavierliang/sectionSlide)
